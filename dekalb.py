@@ -1,17 +1,7 @@
-import sys
-import asyncio
-from fastapi import FastAPI, HTTPException, Response
-from pydantic import BaseModel
+from fastapi import  HTTPException
 from playwright.sync_api import sync_playwright
 import httpx
 from urllib.parse import urljoin
-from concurrent.futures import ThreadPoolExecutor
-
-
-
-class ClientPayload(BaseModel):
-    parcel: str
-
 
 START_URL = "https://publicaccess.dekalbtax.org/Datalets/Datalet.aspx?sIndex=2&idx=1"
 
